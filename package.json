@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zhuNodeJs/docker-cli#readme",
   "dependencies": {
+    "child_process": "^1.0.2",
     "github-webhook-handler": "^1.0.0",
     "http": "0.0.1-security"
   }
