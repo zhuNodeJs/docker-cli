@@ -5,8 +5,9 @@ const handler = createHandler({
   secret: "myHashSecret"
 })
 
-function run_cmd(cmd, args, callback) {
-  var spawn = require('child_process').spawn;
+const {spawn} = require('child_process');
+
+function run_cmd(cmd, args, callback) {  
   var child = spawn(cmd, args);
 
   var resp = '';
