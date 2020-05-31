@@ -5,10 +5,10 @@ const handler = createHandler({
   secret: "myHashSecret"
 })
 
-http.createServer((req, res) => {
-  handler((req, res, err) => {
-    res.statusCode = 404;
-    res.end('no such location');
+http.createServer(function (req, res) {
+  handler(req, res, function (err) {
+    res.statusCode = 404
+    res.end('no such location')
   })
 }).listen(7777, () => {
   console.log('webhook listen at 7777')
